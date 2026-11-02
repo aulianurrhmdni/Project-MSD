@@ -1,0 +1,235 @@
+/* Shopping screens. Columns use minmax(0, ...) to contain long filters and names. */
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 44px;
+}
+.filters {
+  display: grid;
+  align-content: start;
+  gap: 28px;
+  min-width: 0;
+}
+.filters h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.filter-options {
+  display: grid;
+  gap: 6px;
+}
+.filter-options button {
+  border: 0;
+  background: var(--surface);
+  text-align: left;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.filter-options button[aria-pressed='true'] {
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 600;
+}
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.sort-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.sort-label select {
+  width: auto;
+}
+.catalog-products {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 40px;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 28px;
+}
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+.detail-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.detail-copy {
+  display: grid;
+  gap: 24px;
+}
+.detail-copy h1 {
+  font-size: clamp(30px, 3.2vw, 46px);
+}
+.price {
+  font-size: 30px;
+  font-weight: 700;
+}
+.specs {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  background: var(--surface);
+}
+.specs > div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+}
+.specs dt {
+  color: var(--muted);
+}
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  background: var(--surface);
+  border-radius: 4px;
+}
+.quantity button {
+  border: 0;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+}
+.quantity output {
+  min-width: 30px;
+  text-align: center;
+}
+.seller-detail {
+  padding: 24px;
+  background: var(--blue-soft);
+  display: grid;
+  gap: 12px;
+}
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 28px;
+  align-items: start;
+}
+.order-summary {
+  position: sticky;
+  top: 112px;
+  display: grid;
+  gap: 22px;
+}
+.cart-items {
+  display: grid;
+  gap: 28px;
+  margin-block: 28px;
+}
+.cart-items li {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 20px;
+}
+.cart-items img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+}
+.cart-items a {
+  text-decoration: none;
+}
+.cart-items .action-row {
+  margin-top: 12px;
+}
+.payment-option {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  align-items: start;
+}
+.payment-option small {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.sum-row {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sum-row b,
+.sum-row strong {
+  flex: none;
+}
+.total {
+  font-size: 20px;
+}
+.order-card {
+  display: grid;
+  gap: 20px;
+}
+.order-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: start;
+}
+.order-heading h2 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+.status {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--ink);
+}
+.status.wait,
+.status.go {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+}
+.status.stop {
+  background: var(--red-soft);
+  color: var(--red-dark);
+}
+.status.done {
+  background: var(--line);
+}
+.payment-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.qr-photo {
+  max-width: 230px;
+  width: 100%;
+}
+.proof-photo {
+  max-width: 160px;
+  max-height: 180px;
+  object-fit: contain;
+}
+.timeline {
+  font-size: 14px;
+}
+.timeline summary {
+  cursor: pointer;
+}
+.timeline ol {
+  padding-left: 20px;
+  margin-top: 12px;
+}

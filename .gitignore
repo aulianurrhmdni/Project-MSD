@@ -1,0 +1,45 @@
+# Hanya folder website, konfigurasi .gitignore, dan README.md yang boleh masuk Git.
+# Folder root lain, termasuk docs, .claude, dan .taste-skill, diabaikan.
+/*
+!/.gitignore
+!/README.md
+!/website/
+
+# AI assistant settings, local instructions, and skills (at any depth).
+**/.claude/
+**/.codex/
+**/.agents/
+**/.agent/
+**/.cursor/
+**/.windsurf/
+**/.gemini/
+**/.copilot/
+**/.aider*
+**/.taste-skill/
+**/skills/
+**/AGENTS.md
+**/CLAUDE.md
+**/GEMINI.md
+**/SKILL.md
+**/.cursorrules
+**/.cursorignore
+**/.windsurfrules
+
+# Secrets and local environment settings.
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+
+# Dependencies, caches, editor settings, and temporary files.
+**/node_modules/
+**/.cache/
+**/.vscode/
+**/.idea/
+**/.DS_Store
+**/Thumbs.db
+**/*.log
+**/*.tmp
+**/*.bak
+**/*~

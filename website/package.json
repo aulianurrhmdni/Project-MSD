@@ -1,0 +1,25 @@
+{
+  "name": "pasar-inpress-kebun-sayur",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5510",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5511",
+    "test": "node --test tests/*.test.js",
+    "format": "prettier --write src tests index.html vite.config.js vercel.json",
+    "format:check": "prettier --check src tests index.html vite.config.js vercel.json"
+  },
+  "dependencies": {
+    "@vueuse/core": "^15.0.0",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "prettier": "^3.9.10",
+    "vite": "^8.3.5"
+  }
+}
